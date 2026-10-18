@@ -1,0 +1,132 @@
+personal:
+  name: "Ament Diljo"
+  title: "Software Engineer | Full-Stack Developer"
+  email: "amentdiljo5@gmail.com"
+  phone: "+971 566228023"
+  linkedin: "https://www.linkedin.com/in/ament-diljo-2704b4329/"
+  linkedin_display: "linkedin.com/in/ament-diljo-2704b4329"
+  github: "https://github.com/Ament1234"
+  github_display: "github.com/Ament1234"
+  resume_url: "./static/Ament_DiljoResume.pdf"
+  photo: "./static/img/headshot.jpg"
+  hero_intro: "Hello, I'm"
+  hero_description: "MCA graduate with hands-on experience in full-stack web development, REST APIs, database-driven applications, and e-commerce and business software."
+
+about:
+  summary: |
+    I am a junior software engineer and full-stack web developer with a strong foundation in computer science and practical web development. I hold a Master of Computer Applications (MCA) completed in 2026 from Nirmala College, Muvattupuzha (Mahatma Gandhi University) and a Bachelor of Computer Applications (BCA) from Don Bosco College (Calicut University).
+  internship: |
+    During my six-month MEAN Stack Developer internship at Bairuha Technologies, I gained valuable industry experience building responsive web interfaces, developing RESTful APIs, and implementing CRUD functionality using Angular, Node.js, Express.js, and MongoDB.
+  additional_projects: |
+    In addition to JavaScript frameworks, I have project experience with Python, Django, MySQL, and OpenCV for computer vision and image processing. I am passionate about backend engineering, full-stack architecture, and creating practical, scalable web applications that solve real-world problems.
+  career_goal: |
+    Currently seeking software developer, web developer, and full-stack developer opportunities in the UAE (Abu Dhabi, Dubai, and surrounding regions).
+
+skills:
+  - category: "Programming Languages"
+    items: ["Python", "Java", "JavaScript", "PHP", "C", "SQL"]
+  - category: "Frontend"
+    items: ["React.js", "Angular", "HTML5", "CSS3"]
+  - category: "Backend"
+    items: ["Node.js", "Express.js", "Django", "REST APIs", "CRUD Operations"]
+  - category: "Databases"
+    items: ["MySQL", "MongoDB"]
+  - category: "Tools"
+    items: ["Git", "GitHub", "Postman", "VS Code"]
+  - category: "AI & Computer Vision"
+    items: ["OpenCV", "K-Means Clustering"]
+
+experience:
+  - role: "MEAN Stack Developer Intern"
+    company: "Bairuha Technologies"
+    duration: "March 2026 – September 2026"
+    location: "Internship"
+    responsibilities:
+      - "Developed responsive web application interfaces using Angular, HTML5, CSS3, and JavaScript."
+      - "Built and integrated RESTful APIs to connect frontend components with backend services."
+      - "Implemented core CRUD functionality and database operations using Node.js, Express.js, and MongoDB."
+      - "Performed application testing, identified and debugged technical issues, and optimized performance."
+      - "Collaborated with senior developers and the development team to ship production features."
+    technologies: ["Angular", "Node.js", "Express.js", "MongoDB", "REST APIs", "HTML5", "CSS3", "JavaScript"]
+
+projects:
+  - name: "Wedding Invitation Website"
+    category: "Full-Stack Web Application"
+    description: "A responsive wedding invitation web application built with Django. Provides an elegant digital platform to display event details, ceremony schedules, venue locations, and guest RSVP management backed by structured SQLite database storage."
+    technologies: ["Python", "Django", "SQLite", "HTML5", "CSS3", "JavaScript"]
+    github_url: "https://github.com/Ament1234/wedding-invitation"
+    demo_url: ""
+    is_github: true
+    is_demo: false
+    placeholder_type: "code"
+
+  - name: "Spices Auction"
+    category: "E-Commerce & Bidding Platform"
+    description: "A web-based trading and auction management platform for spices. Enables sellers to list spice lots with specifications and registered buyers to submit competitive bids, featuring administrative modules for managing listings, bid statuses, and transactions."
+    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"]
+    github_url: "https://github.com/Ament1234/spices-auction"
+    demo_url: ""
+    is_github: true
+    is_demo: false
+    placeholder_type: "auction"
+
+  - name: "FashionAI"
+    category: "AI & Computer Vision Application"
+    description: "An intelligent fashion recommendation platform built using Python, Django, MySQL, and OpenCV. Utilizes image processing and K-Means clustering algorithms to detect dominant skin tones from uploaded portraits and recommend complementary color palettes and outfit collections."
+    technologies: ["Python", "Django", "MySQL", "OpenCV", "K-Means", "HTML5", "CSS3", "JavaScript"]
+    github_url: "https://github.com/Ament1234/fashionhub"
+    demo_url: ""
+    is_github: true
+    is_demo: false
+    placeholder_type: "ai"
+
+  - name: "Hue Boutique — E-Commerce Website"
+    category: "E-Commerce Web Application"
+    description: "A full-stack e-commerce web application featuring a clean, responsive storefront. Includes product catalog browsing, detailed item views, cart management, and backend RESTful API endpoints for product CRUD operations and inventory handling."
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "CSS3"]
+    github_url: ""
+    demo_url: ""
+    is_github: false
+    is_demo: false
+    placeholder_type: "store"
+
+  - name: "Orbit — Business Management / ERP Platform"
+    category: "Enterprise Software (Internship)"
+    company: "Bairuha Technologies"
+    description: "Contributed to enterprise business software during my internship at Bairuha Technologies. Worked on business management, CRM, and ERP-style modules, implementing responsive UI views, integrating RESTful APIs, and developing CRUD operations with Angular, Node.js, and MongoDB."
+    technologies: ["Angular", "Node.js", "Express.js", "MongoDB", "REST APIs", "HTML5", "CSS3"]
+    github_url: ""
+    demo_url: ""
+    is_github: false
+    is_demo: false
+    placeholder_type: "erp"
+
+  - name: "Workshop"
+    category: "Computer Vision & ML Experiments"
+    description: "A practical suite of computer vision and machine learning applications implemented in Python. Includes real-time human pose estimation, hand gesture tracking, facial emotion detection with text-to-speech feedback, and video background subtraction."
+    technologies: ["Python", "OpenCV", "MediaPipe", "Machine Learning"]
+    github_url: "https://github.com/Ament1234/Workshop"
+    demo_url: ""
+    is_github: true
+    is_demo: false
+    placeholder_type: "vision"
+
+education:
+  - degree: "Master of Computer Applications (MCA)"
+    institution: "Nirmala College, Muvattupuzha"
+    university: "Mahatma Gandhi University"
+    period: "September 2024 – April 2026"
+    score: "CGPA: 7.63"
+  - degree: "Bachelor of Computer Applications (BCA)"
+    institution: "Don Bosco College"
+    university: "Calicut University"
+    period: "June 2020 – April 2023"
+    score: "CGPA: 5.98"
+
+certifications:
+  - name: "Python for Data Science"
+    issuer: "NPTEL"
+  - name: "Web Development Internship"
+    issuer: "Rosversity"
+  - name: "Basics of Computer Networks"
+    issuer: "Foundational Certification"

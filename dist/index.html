@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ament Diljo | Software Engineer | Full-Stack Developer</title>
+    
+    <!-- Meta tags for SEO & Recruitment -->
+    <meta name="description" content="Portfolio of Ament Diljo, Junior Software Engineer and Full-Stack Web Developer. MCA graduate with hands-on experience in React, Angular, Node.js, Python, Django, REST APIs, and database-driven software. Seeking opportunities in the UAE.">
+    <meta name="keywords" content="Ament Diljo, Software Engineer, Full-Stack Developer, Junior Web Developer, Python, Django, Node.js, Angular, React, UAE, Dubai, Abu Dhabi">
+    <meta name="author" content="Ament Diljo">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./static/css/styles.css?v=5.1">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Ament Diljo Homepage">
+                <span class="brand-text">Ament Diljo</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="./static/Ament_DiljoResume.pdf" class="btn btn-outline btn-sm" download="Ament_DiljoResume.pdf">
+                    <i class="fa-solid fa-arrow-down-to-line"></i> Resume
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <!-- Left Column: Details & Actions -->
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-accent"></span>
+                        <span>Hello, I'm</span>
+                    </div>
+
+                    <h1 class="hero-name">Ament Diljo</h1>
+                    <h2 class="hero-title">Software Engineer | Full-Stack Developer</h2>
+                    <p class="hero-description">MCA graduate with hands-on experience in full-stack web development, REST APIs, database-driven applications, and e-commerce and business software.</p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="./static/Ament_DiljoResume.pdf" class="btn btn-secondary" download="Ament_DiljoResume.pdf">
+                            <i class="fa-solid fa-arrow-down-to-line"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-social-row">
+                        <span class="social-prefix">Connect:</span>
+                        <a href="https://www.linkedin.com/in/ament-diljo-2704b4329/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <span class="social-separator" aria-hidden="true">&bull;</span>
+                        <a href="https://github.com/Ament1234" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <span class="social-separator" aria-hidden="true">&bull;</span>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amentdiljo5@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Send Email via Gmail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>amentdiljo5@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Professional Portrait -->
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <img src="./static/img/headshot.jpg" alt="Portrait photograph of Ament Diljo" class="hero-headshot" width="340" height="400" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section (Editorial 2-Column Layout) -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Left: Editorial Heading -->
+                    <div class="about-header-column">
+                        <span class="section-eyebrow">01 / Profile</span>
+                        <h2 class="section-heading">About Me</h2>
+                        <div class="editorial-line"></div>
+                    </div>
+
+                    <!-- Right: Story & Details -->
+                    <div class="about-body-column">
+                        <p class="about-paragraph lead-paragraph">I am a junior software engineer and full-stack web developer with a strong foundation in computer science and practical web development. I hold a Master of Computer Applications (MCA) completed in 2026 from Nirmala College, Muvattupuzha (Mahatma Gandhi University) and a Bachelor of Computer Applications (BCA) from Don Bosco College (Calicut University).
+</p>
+                        <p class="about-paragraph">During my six-month MEAN Stack Developer internship at Bairuha Technologies, I gained valuable industry experience building responsive web interfaces, developing RESTful APIs, and implementing CRUD functionality using Angular, Node.js, Express.js, and MongoDB.
+</p>
+                        <p class="about-paragraph">In addition to JavaScript frameworks, I have project experience with Python, Django, MySQL, and OpenCV for computer vision and image processing. I am passionate about backend engineering, full-stack architecture, and creating practical, scalable web applications that solve real-world problems.
+</p>
+
+                        <div class="employment-card">
+                            <div class="employment-icon-box">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="employment-text">
+                                <span class="employment-label">Employment Readiness</span>
+                                <p class="employment-desc">Currently seeking software developer, web developer, and full-stack developer opportunities in the UAE (Abu Dhabi, Dubai, and surrounding regions).
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Professional Experience Section (Timeline Layout) -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">02 / Experience</span>
+                    <h2 class="section-heading">Professional Experience</h2>
+                    <p class="section-subheading">Practical software engineering and full-stack development practice.</p>
+                </div>
+
+                <div class="timeline-container">
+                    
+                    <article class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-wrap">
+                                <h3 class="timeline-role">MEAN Stack Developer Intern</h3>
+                                <p class="timeline-company">Bairuha Technologies</p>
+                            </div>
+                            <div class="timeline-meta-wrap">
+                                <span class="timeline-duration"><i class="fa-regular fa-calendar-check"></i> March 2026 – September 2026</span>
+                                <span class="timeline-location-badge">Internship</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-body">
+                            <h4 class="responsibilities-title">Key Responsibilities &amp; Contributions:</h4>
+                            <ul class="responsibilities-list">
+                                
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>Developed responsive web application interfaces using Angular, HTML5, CSS3, and JavaScript.</span>
+                                </li>
+                                
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>Built and integrated RESTful APIs to connect frontend components with backend services.</span>
+                                </li>
+                                
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>Implemented core CRUD functionality and database operations using Node.js, Express.js, and MongoDB.</span>
+                                </li>
+                                
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>Performed application testing, identified and debugged technical issues, and optimized performance.</span>
+                                </li>
+                                
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>Collaborated with senior developers and the development team to ship production features.</span>
+                                </li>
+                                
+                            </ul>
+
+                            <div class="timeline-tech-row">
+                                <span class="tech-row-heading">Technologies:</span>
+                                <div class="tech-tags-group">
+                                    
+                                    <span class="tech-tag">Angular</span>
+                                    
+                                    <span class="tech-tag">Node.js</span>
+                                    
+                                    <span class="tech-tag">Express.js</span>
+                                    
+                                    <span class="tech-tag">MongoDB</span>
+                                    
+                                    <span class="tech-tag">REST APIs</span>
+                                    
+                                    <span class="tech-tag">HTML5</span>
+                                    
+                                    <span class="tech-tag">CSS3</span>
+                                    
+                                    <span class="tech-tag">JavaScript</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Featured Projects Section (Gallery Grid) -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">03 / Works</span>
+                    <h2 class="section-heading">Featured Projects</h2>
+                    <p class="section-subheading">A curated showcase of verified web applications, e-commerce platforms, and computer vision systems.</p>
+                </div>
+
+                <div class="projects-gallery-grid">
+                    
+                    
+                    
+                    
+                    
+                    
+                    <article class="project-gallery-card">
+                        <!-- Card Visual Preview (16:10 Aspect Ratio) -->
+                        <div class="project-preview-wrapper">
+                            
+                            <img src="./static/img/fashionai_preview.png" alt="FashionAI / FashionHub Platform Interface Preview" class="project-preview-img" loading="lazy">
+                            <div class="preview-overlay-badge">
+                                <span class="badge-text">AI & Computer Vision Application</span>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="project-card-body">
+                            <span class="project-category-eyebrow">AI & Computer Vision Application</span>
+                            <h3 class="project-title">FashionAI</h3>
+                            <p class="project-description">An intelligent fashion recommendation platform built using Python, Django, MySQL, and OpenCV. Utilizes image processing and K-Means clustering algorithms to detect dominant skin tones from uploaded portraits and recommend complementary color palettes and outfit collections.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">Python</span>
+                                
+                                <span class="tech-tag-sm">Django</span>
+                                
+                                <span class="tech-tag-sm">MySQL</span>
+                                
+                                <span class="tech-tag-sm">OpenCV</span>
+                                
+                                <span class="tech-tag-sm">K-Means</span>
+                                
+                                <span class="tech-tag-sm">HTML5</span>
+                                
+                                <span class="tech-tag-sm">CSS3</span>
+                                
+                                <span class="tech-tag-sm">JavaScript</span>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Links -->
+                        <div class="project-card-footer">
+                            
+                            <a href="https://github.com/Ament1234/fashionhub" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View on GitHub</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                            </a>
+                            
+                        </div>
+                    </article>
+                    
+                    
+                    
+                    
+                    
+                    <article class="project-gallery-card">
+                        <!-- Card Visual Preview (16:10 Aspect Ratio) -->
+                        <div class="project-preview-wrapper">
+                            
+                            <img src="./static/img/orbit_preview.png" alt="Orbit Business Management & ERP Platform Interface Preview" class="project-preview-img" loading="lazy">
+                            <div class="preview-overlay-badge">
+                                <span class="badge-text">Enterprise Software (Internship)</span>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="project-card-body">
+                            <span class="project-category-eyebrow">Enterprise Software (Internship)</span>
+                            <h3 class="project-title">Orbit — Business Management / ERP Platform</h3>
+                            <p class="project-description">Contributed to enterprise business software during my internship at Bairuha Technologies. Worked on business management, CRM, and ERP-style modules, implementing responsive UI views, integrating RESTful APIs, and developing CRUD operations with Angular, Node.js, and MongoDB.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">Angular</span>
+                                
+                                <span class="tech-tag-sm">Node.js</span>
+                                
+                                <span class="tech-tag-sm">Express.js</span>
+                                
+                                <span class="tech-tag-sm">MongoDB</span>
+                                
+                                <span class="tech-tag-sm">REST APIs</span>
+                                
+                                <span class="tech-tag-sm">HTML5</span>
+                                
+                                <span class="tech-tag-sm">CSS3</span>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Links -->
+                        <div class="project-card-footer">
+                            
+                            <span class="project-internal-note">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Bairuha Technologies &bull; Internal Project</span>
+                            </span>
+                            
+                        </div>
+                    </article>
+                    
+                    
+                    
+                    
+                </div>
+
+                <!-- Toggle Button to View More / Show Less Projects -->
+                <div class="projects-toggle-wrap">
+                    <button type="button" id="toggle-more-projects" class="btn btn-secondary btn-toggle-projects" aria-expanded="false" aria-controls="additional-projects-wrap">
+                        <span class="toggle-text">View More Projects</span>
+                        <i class="fa-solid fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Projects (Hidden initially, revealed via toggle) -->
+                <div id="additional-projects-wrap" class="other-projects-wrap is-collapsed" aria-hidden="true">
+                    <div class="other-projects-header">
+                        <span class="other-projects-eyebrow">Other Works &amp; Experiments</span>
+                        <h3 class="other-projects-title">Additional Projects</h3>
+                        <p class="other-projects-desc">Other verified full-stack applications, auction systems, e-commerce stores, and computer vision utilities.</p>
+                    </div>
+
+                    <div class="other-projects-grid">
+                        
+                        
+                        <article class="other-project-card">
+                            <div class="other-card-top">
+                                <span class="project-category-eyebrow">Full-Stack Web Application</span>
+                                
+                                <a href="https://github.com/Ament1234/wedding-invitation" target="_blank" rel="noopener noreferrer" class="other-github-link" aria-label="View on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                                </a>
+                                
+                            </div>
+
+                            <h4 class="other-project-name">Wedding Invitation Website</h4>
+                            <p class="other-project-desc">A responsive wedding invitation web application built with Django. Provides an elegant digital platform to display event details, ceremony schedules, venue locations, and guest RSVP management backed by structured SQLite database storage.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">Python</span>
+                                
+                                <span class="tech-tag-sm">Django</span>
+                                
+                                <span class="tech-tag-sm">SQLite</span>
+                                
+                                <span class="tech-tag-sm">HTML5</span>
+                                
+                                <span class="tech-tag-sm">CSS3</span>
+                                
+                                <span class="tech-tag-sm">JavaScript</span>
+                                
+                            </div>
+
+                            <div class="other-card-footer">
+                                
+                                <a href="https://github.com/Ament1234/wedding-invitation" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Repository</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                                </a>
+                                
+                            </div>
+                        </article>
+                        
+                        
+                        
+                        <article class="other-project-card">
+                            <div class="other-card-top">
+                                <span class="project-category-eyebrow">E-Commerce & Bidding Platform</span>
+                                
+                                <a href="https://github.com/Ament1234/spices-auction" target="_blank" rel="noopener noreferrer" class="other-github-link" aria-label="View on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                                </a>
+                                
+                            </div>
+
+                            <h4 class="other-project-name">Spices Auction</h4>
+                            <p class="other-project-desc">A web-based trading and auction management platform for spices. Enables sellers to list spice lots with specifications and registered buyers to submit competitive bids, featuring administrative modules for managing listings, bid statuses, and transactions.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">PHP</span>
+                                
+                                <span class="tech-tag-sm">MySQL</span>
+                                
+                                <span class="tech-tag-sm">HTML5</span>
+                                
+                                <span class="tech-tag-sm">CSS3</span>
+                                
+                                <span class="tech-tag-sm">JavaScript</span>
+                                
+                            </div>
+
+                            <div class="other-card-footer">
+                                
+                                <a href="https://github.com/Ament1234/spices-auction" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Repository</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                                </a>
+                                
+                            </div>
+                        </article>
+                        
+                        
+                        
+                        
+                        
+                        <article class="other-project-card">
+                            <div class="other-card-top">
+                                <span class="project-category-eyebrow">E-Commerce Web Application</span>
+                                
+                            </div>
+
+                            <h4 class="other-project-name">Hue Boutique — E-Commerce Website</h4>
+                            <p class="other-project-desc">A full-stack e-commerce web application featuring a clean, responsive storefront. Includes product catalog browsing, detailed item views, cart management, and backend RESTful API endpoints for product CRUD operations and inventory handling.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">React.js</span>
+                                
+                                <span class="tech-tag-sm">Node.js</span>
+                                
+                                <span class="tech-tag-sm">Express.js</span>
+                                
+                                <span class="tech-tag-sm">MongoDB</span>
+                                
+                                <span class="tech-tag-sm">REST APIs</span>
+                                
+                                <span class="tech-tag-sm">CSS3</span>
+                                
+                            </div>
+
+                            <div class="other-card-footer">
+                                
+                                <span class="project-academic-note">
+                                    <i class="fa-solid fa-code-branch"></i> Academic / Independent Project
+                                </span>
+                                
+                            </div>
+                        </article>
+                        
+                        
+                        
+                        
+                        
+                        <article class="other-project-card">
+                            <div class="other-card-top">
+                                <span class="project-category-eyebrow">Computer Vision & ML Experiments</span>
+                                
+                                <a href="https://github.com/Ament1234/Workshop" target="_blank" rel="noopener noreferrer" class="other-github-link" aria-label="View on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                                </a>
+                                
+                            </div>
+
+                            <h4 class="other-project-name">Workshop</h4>
+                            <p class="other-project-desc">A practical suite of computer vision and machine learning applications implemented in Python. Includes real-time human pose estimation, hand gesture tracking, facial emotion detection with text-to-speech feedback, and video background subtraction.</p>
+
+                            <div class="project-tech-tags">
+                                
+                                <span class="tech-tag-sm">Python</span>
+                                
+                                <span class="tech-tag-sm">OpenCV</span>
+                                
+                                <span class="tech-tag-sm">MediaPipe</span>
+                                
+                                <span class="tech-tag-sm">Machine Learning</span>
+                                
+                            </div>
+
+                            <div class="other-card-footer">
+                                
+                                <a href="https://github.com/Ament1234/Workshop" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Repository</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                                </a>
+                                
+                            </div>
+                        </article>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Technical Skills Section (Clean Categorized Grid) -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">04 / Expertise</span>
+                    <h2 class="section-heading">Technical Skills</h2>
+                    <p class="section-subheading">Core competencies developed through rigorous academic study and hands-on full-stack development.</p>
+                </div>
+
+                <div class="skills-editorial-grid">
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-code"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">Programming Languages</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">Python</span>
+                            
+                            <span class="skill-badge">Java</span>
+                            
+                            <span class="skill-badge">JavaScript</span>
+                            
+                            <span class="skill-badge">PHP</span>
+                            
+                            <span class="skill-badge">C</span>
+                            
+                            <span class="skill-badge">SQL</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-display"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">Frontend</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">React.js</span>
+                            
+                            <span class="skill-badge">Angular</span>
+                            
+                            <span class="skill-badge">HTML5</span>
+                            
+                            <span class="skill-badge">CSS3</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-server"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">Backend</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">Node.js</span>
+                            
+                            <span class="skill-badge">Express.js</span>
+                            
+                            <span class="skill-badge">Django</span>
+                            
+                            <span class="skill-badge">REST APIs</span>
+                            
+                            <span class="skill-badge">CRUD Operations</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-database"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">Databases</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">MySQL</span>
+                            
+                            <span class="skill-badge">MongoDB</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">Tools</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">Git</span>
+                            
+                            <span class="skill-badge">GitHub</span>
+                            
+                            <span class="skill-badge">Postman</span>
+                            
+                            <span class="skill-badge">VS Code</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    
+                                    <i class="fa-solid fa-brain"></i>
+                                    
+                                </span>
+                                <h3 class="skill-category-name">AI & Computer Vision</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            
+                            <span class="skill-badge">OpenCV</span>
+                            
+                            <span class="skill-badge">K-Means Clustering</span>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">05 / Background</span>
+                    <h2 class="section-heading">Education &amp; Qualifications</h2>
+                </div>
+
+                <div class="education-editorial-grid">
+                    
+                    <article class="education-editorial-card">
+                        <div class="edu-card-top">
+                            <h3 class="edu-degree-title">Master of Computer Applications (MCA)</h3>
+                            <span class="edu-cgpa-badge">CGPA: 7.63</span>
+                        </div>
+                        <p class="edu-institution-name">Nirmala College, Muvattupuzha</p>
+                        <p class="edu-university-name">Mahatma Gandhi University</p>
+                        <p class="edu-period-meta"><i class="fa-regular fa-calendar"></i> September 2024 – April 2026</p>
+                    </article>
+                    
+                    <article class="education-editorial-card">
+                        <div class="edu-card-top">
+                            <h3 class="edu-degree-title">Bachelor of Computer Applications (BCA)</h3>
+                            <span class="edu-cgpa-badge">CGPA: 5.98</span>
+                        </div>
+                        <p class="edu-institution-name">Don Bosco College</p>
+                        <p class="edu-university-name">Calicut University</p>
+                        <p class="edu-period-meta"><i class="fa-regular fa-calendar"></i> June 2020 – April 2023</p>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">06 / Credentials</span>
+                    <h2 class="section-heading">Certifications</h2>
+                </div>
+
+                <div class="certifications-editorial-grid">
+                    
+                    <div class="certification-item-card">
+                        <div class="cert-icon-container">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Python for Data Science</h3>
+                            <p class="cert-authority">NPTEL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item-card">
+                        <div class="cert-icon-container">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Web Development Internship</h3>
+                            <p class="cert-authority">Rosversity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item-card">
+                        <div class="cert-icon-container">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Basics of Computer Networks</h3>
+                            <p class="cert-authority">Foundational Certification</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header-editorial text-center">
+                    <span class="section-eyebrow">07 / Connect</span>
+                    <h2 class="section-heading">Get In Touch</h2>
+                    <p class="section-subheading">I am actively seeking junior software developer, web developer, and full-stack developer positions in the UAE (Abu Dhabi and Dubai). Feel free to reach out directly via email, phone, or professional networks.</p>
+                </div>
+
+                <div class="contact-editorial-container">
+                    <div class="contact-cards-grid">
+                        <!-- Email Card -->
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amentdiljo5@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-card-link" aria-label="Send Email via Gmail">
+                            <div class="contact-icon-frame">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">Email</span>
+                                <span class="contact-text">amentdiljo5@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone Card -->
+                        <a href="tel:+971 566228023" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">Phone</span>
+                                <span class="contact-text">+971 566228023</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/ament-diljo-2704b4329/" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">LinkedIn</span>
+                                <span class="contact-text">linkedin.com/in/ament-diljo-2704b4329</span>
+                            </div>
+                        </a>
+
+                        <!-- GitHub Card -->
+                        <a href="https://github.com/Ament1234" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">GitHub</span>
+                                <span class="contact-text">github.com/Ament1234</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-location-note">
+                        <i class="fa-solid fa-location-dot location-dot-icon"></i>
+                        <span>Open to relocation and available for immediate on-site or hybrid opportunities across the UAE.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand-info">
+                <p class="footer-copyright">&copy; 2026 Ament Diljo. All rights reserved.</p>
+                <p class="footer-tagline">Crafted with precision, semantic HTML, and modern CSS.</p>
+            </div>
+            <div class="footer-nav-action">
+                <a href="#hero" class="back-to-top-link">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/js/main.js?v=5.1"></script>
+</body>
+</html>

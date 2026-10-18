@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.personal.name }} | {{ data.personal.title }}</title>
+    
+    <!-- Meta tags for SEO & Recruitment -->
+    <meta name="description" content="Portfolio of {{ data.personal.name }}, Junior Software Engineer and Full-Stack Web Developer. MCA graduate with hands-on experience in React, Angular, Node.js, Python, Django, REST APIs, and database-driven software. Seeking opportunities in the UAE.">
+    <meta name="keywords" content="Ament Diljo, Software Engineer, Full-Stack Developer, Junior Web Developer, Python, Django, Node.js, Angular, React, UAE, Dubai, Abu Dhabi">
+    <meta name="author" content="{{ data.personal.name }}">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./static/css/styles.css?v=5.1">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Ament Diljo Homepage">
+                <span class="brand-text">{{ data.personal.name }}</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="{{ data.personal.resume_url }}" class="btn btn-outline btn-sm" download="Ament_DiljoResume.pdf">
+                    <i class="fa-solid fa-arrow-down-to-line"></i> Resume
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <!-- Left Column: Details & Actions -->
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-accent"></span>
+                        <span>{{ data.personal.hero_intro }}</span>
+                    </div>
+
+                    <h1 class="hero-name">{{ data.personal.name }}</h1>
+                    <h2 class="hero-title">{{ data.personal.title }}</h2>
+                    <p class="hero-description">{{ data.personal.hero_description }}</p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="{{ data.personal.resume_url }}" class="btn btn-secondary" download="Ament_DiljoResume.pdf">
+                            <i class="fa-solid fa-arrow-down-to-line"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-social-row">
+                        <span class="social-prefix">Connect:</span>
+                        <a href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <span class="social-separator" aria-hidden="true">&bull;</span>
+                        <a href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <span class="social-separator" aria-hidden="true">&bull;</span>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ data.personal.email }}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Send Email via Gmail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>{{ data.personal.email }}</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Professional Portrait -->
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <img src="{{ data.personal.photo }}" alt="Portrait photograph of {{ data.personal.name }}" class="hero-headshot" width="340" height="400" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section (Editorial 2-Column Layout) -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Left: Editorial Heading -->
+                    <div class="about-header-column">
+                        <span class="section-eyebrow">01 / Profile</span>
+                        <h2 class="section-heading">About Me</h2>
+                        <div class="editorial-line"></div>
+                    </div>
+
+                    <!-- Right: Story & Details -->
+                    <div class="about-body-column">
+                        <p class="about-paragraph lead-paragraph">{{ data.about.summary }}</p>
+                        <p class="about-paragraph">{{ data.about.internship }}</p>
+                        <p class="about-paragraph">{{ data.about.additional_projects }}</p>
+
+                        <div class="employment-card">
+                            <div class="employment-icon-box">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="employment-text">
+                                <span class="employment-label">Employment Readiness</span>
+                                <p class="employment-desc">{{ data.about.career_goal }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Professional Experience Section (Timeline Layout) -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">02 / Experience</span>
+                    <h2 class="section-heading">Professional Experience</h2>
+                    <p class="section-subheading">Practical software engineering and full-stack development practice.</p>
+                </div>
+
+                <div class="timeline-container">
+                    {% for job in data.experience %}
+                    <article class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-wrap">
+                                <h3 class="timeline-role">{{ job.role }}</h3>
+                                <p class="timeline-company">{{ job.company }}</p>
+                            </div>
+                            <div class="timeline-meta-wrap">
+                                <span class="timeline-duration"><i class="fa-regular fa-calendar-check"></i> {{ job.duration }}</span>
+                                <span class="timeline-location-badge">{{ job.location }}</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-body">
+                            <h4 class="responsibilities-title">Key Responsibilities &amp; Contributions:</h4>
+                            <ul class="responsibilities-list">
+                                {% for item in job.responsibilities %}
+                                <li>
+                                    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                    <span>{{ item }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+
+                            <div class="timeline-tech-row">
+                                <span class="tech-row-heading">Technologies:</span>
+                                <div class="tech-tags-group">
+                                    {% for tech in job.technologies %}
+                                    <span class="tech-tag">{{ tech }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Featured Projects Section (Gallery Grid) -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">03 / Works</span>
+                    <h2 class="section-heading">Featured Projects</h2>
+                    <p class="section-subheading">A curated showcase of verified web applications, e-commerce platforms, and computer vision systems.</p>
+                </div>
+
+                <div class="projects-gallery-grid">
+                    {% for project in data.projects %}
+                    {% if project.name == 'FashionAI' or 'Orbit' in project.name %}
+                    <article class="project-gallery-card">
+                        <!-- Card Visual Preview (16:10 Aspect Ratio) -->
+                        <div class="project-preview-wrapper">
+                            {% if project.name == 'FashionAI' %}
+                            <img src="./static/img/fashionai_preview.png" alt="FashionAI / FashionHub Platform Interface Preview" class="project-preview-img" loading="lazy">
+                            <div class="preview-overlay-badge">
+                                <span class="badge-text">{{ project.category }}</span>
+                            </div>
+                            {% elif 'Orbit' in project.name %}
+                            <img src="./static/img/orbit_preview.png" alt="Orbit Business Management & ERP Platform Interface Preview" class="project-preview-img" loading="lazy">
+                            <div class="preview-overlay-badge">
+                                <span class="badge-text">{{ project.category }}</span>
+                            </div>
+                            {% else %}
+                            <div class="project-preview-placeholder type-{{ project.placeholder_type }}">
+                                <div class="placeholder-watermark" aria-hidden="true">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="placeholder-content">
+                                    <span class="placeholder-category-pill">{{ project.category }}</span>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="project-card-body">
+                            <span class="project-category-eyebrow">{{ project.category }}</span>
+                            <h3 class="project-title">{{ project.name }}</h3>
+                            <p class="project-description">{{ project.description }}</p>
+
+                            <div class="project-tech-tags">
+                                {% for tech in project.technologies %}
+                                <span class="tech-tag-sm">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Links -->
+                        <div class="project-card-footer">
+                            {% if project.is_github and project.github_url %}
+                            <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View on GitHub</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                            </a>
+                            {% elif project.company %}
+                            <span class="project-internal-note">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>{{ project.company }} &bull; Internal Project</span>
+                            </span>
+                            {% else %}
+                            <span class="project-academic-note">
+                                <i class="fa-solid fa-code-branch"></i> Academic / Independent Project
+                            </span>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Toggle Button to View More / Show Less Projects -->
+                <div class="projects-toggle-wrap">
+                    <button type="button" id="toggle-more-projects" class="btn btn-secondary btn-toggle-projects" aria-expanded="false" aria-controls="additional-projects-wrap">
+                        <span class="toggle-text">View More Projects</span>
+                        <i class="fa-solid fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Projects (Hidden initially, revealed via toggle) -->
+                <div id="additional-projects-wrap" class="other-projects-wrap is-collapsed" aria-hidden="true">
+                    <div class="other-projects-header">
+                        <span class="other-projects-eyebrow">Other Works &amp; Experiments</span>
+                        <h3 class="other-projects-title">Additional Projects</h3>
+                        <p class="other-projects-desc">Other verified full-stack applications, auction systems, e-commerce stores, and computer vision utilities.</p>
+                    </div>
+
+                    <div class="other-projects-grid">
+                        {% for project in data.projects %}
+                        {% if project.name != 'FashionAI' and 'Orbit' not in project.name %}
+                        <article class="other-project-card">
+                            <div class="other-card-top">
+                                <span class="project-category-eyebrow">{{ project.category }}</span>
+                                {% if project.is_github and project.github_url %}
+                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="other-github-link" aria-label="View on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                    <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+
+                            <h4 class="other-project-name">{{ project.name }}</h4>
+                            <p class="other-project-desc">{{ project.description }}</p>
+
+                            <div class="project-tech-tags">
+                                {% for tech in project.technologies %}
+                                <span class="tech-tag-sm">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+
+                            <div class="other-card-footer">
+                                {% if project.is_github and project.github_url %}
+                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Repository</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                                </a>
+                                {% else %}
+                                <span class="project-academic-note">
+                                    <i class="fa-solid fa-code-branch"></i> Academic / Independent Project
+                                </span>
+                                {% endif %}
+                            </div>
+                        </article>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Technical Skills Section (Clean Categorized Grid) -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">04 / Expertise</span>
+                    <h2 class="section-heading">Technical Skills</h2>
+                    <p class="section-subheading">Core competencies developed through rigorous academic study and hands-on full-stack development.</p>
+                </div>
+
+                <div class="skills-editorial-grid">
+                    {% for group in data.skills %}
+                    <div class="skill-category-box">
+                        <div class="skill-category-header">
+                            <div class="skill-title-row">
+                                <span class="skill-cat-icon" aria-hidden="true">
+                                    {% if 'Programming' in group.category or 'Language' in group.category %}
+                                    <i class="fa-solid fa-code"></i>
+                                    {% elif 'Frontend' in group.category %}
+                                    <i class="fa-solid fa-display"></i>
+                                    {% elif 'Backend' in group.category %}
+                                    <i class="fa-solid fa-server"></i>
+                                    {% elif 'Database' in group.category %}
+                                    <i class="fa-solid fa-database"></i>
+                                    {% elif 'Tool' in group.category %}
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    {% elif 'AI' in group.category or 'Vision' in group.category %}
+                                    <i class="fa-solid fa-brain"></i>
+                                    {% else %}
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    {% endif %}
+                                </span>
+                                <h3 class="skill-category-name">{{ group.category }}</h3>
+                            </div>
+                            <div class="skill-thin-divider"></div>
+                        </div>
+
+                        <div class="skill-tags-wrapper">
+                            {% for item in group['items'] %}
+                            <span class="skill-badge">{{ item }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">05 / Background</span>
+                    <h2 class="section-heading">Education &amp; Qualifications</h2>
+                </div>
+
+                <div class="education-editorial-grid">
+                    {% for edu in data.education %}
+                    <article class="education-editorial-card">
+                        <div class="edu-card-top">
+                            <h3 class="edu-degree-title">{{ edu.degree }}</h3>
+                            <span class="edu-cgpa-badge">{{ edu.score }}</span>
+                        </div>
+                        <p class="edu-institution-name">{{ edu.institution }}</p>
+                        <p class="edu-university-name">{{ edu.university }}</p>
+                        <p class="edu-period-meta"><i class="fa-regular fa-calendar"></i> {{ edu.period }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">06 / Credentials</span>
+                    <h2 class="section-heading">Certifications</h2>
+                </div>
+
+                <div class="certifications-editorial-grid">
+                    {% for cert in data.certifications %}
+                    <div class="certification-item-card">
+                        <div class="cert-icon-container">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">{{ cert.name }}</h3>
+                            <p class="cert-authority">{{ cert.issuer }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header-editorial text-center">
+                    <span class="section-eyebrow">07 / Connect</span>
+                    <h2 class="section-heading">Get In Touch</h2>
+                    <p class="section-subheading">I am actively seeking junior software developer, web developer, and full-stack developer positions in the UAE (Abu Dhabi and Dubai). Feel free to reach out directly via email, phone, or professional networks.</p>
+                </div>
+
+                <div class="contact-editorial-container">
+                    <div class="contact-cards-grid">
+                        <!-- Email Card -->
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ data.personal.email }}" target="_blank" rel="noopener noreferrer" class="contact-card-link" aria-label="Send Email via Gmail">
+                            <div class="contact-icon-frame">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">Email</span>
+                                <span class="contact-text">{{ data.personal.email }}</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone Card -->
+                        <a href="tel:{{ data.personal.phone }}" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">Phone</span>
+                                <span class="contact-text">{{ data.personal.phone }}</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="{{ data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">LinkedIn</span>
+                                <span class="contact-text">{{ data.personal.linkedin_display }}</span>
+                            </div>
+                        </a>
+
+                        <!-- GitHub Card -->
+                        <a href="{{ data.personal.github }}" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                            <div class="contact-icon-frame">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-type">GitHub</span>
+                                <span class="contact-text">{{ data.personal.github_display }}</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-location-note">
+                        <i class="fa-solid fa-location-dot location-dot-icon"></i>
+                        <span>Open to relocation and available for immediate on-site or hybrid opportunities across the UAE.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand-info">
+                <p class="footer-copyright">&copy; 2026 {{ data.personal.name }}. All rights reserved.</p>
+                <p class="footer-tagline">Crafted with precision, semantic HTML, and modern CSS.</p>
+            </div>
+            <div class="footer-nav-action">
+                <a href="#hero" class="back-to-top-link">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/js/main.js?v=5.1"></script>
+</body>
+</html>
