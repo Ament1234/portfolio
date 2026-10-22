@@ -77,48 +77,54 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => observer.observe(section));
     }
 
-    // 3. Additional Projects Toggle (View More Projects / Show Less)
+    // 3. Projects Toggle
     const toggleProjectsBtn = document.getElementById('toggle-more-projects');
-    const additionalProjectsWrap = document.getElementById('additional-projects-wrap');
+    const additionalProjectsWrap = document.getElementById('ed-additional-projects');
 
     if (toggleProjectsBtn && additionalProjectsWrap) {
         toggleProjectsBtn.addEventListener('click', () => {
-            const isCurrentlyExpanded = toggleProjectsBtn.getAttribute('aria-expanded') === 'true';
-            const toggleText = toggleProjectsBtn.querySelector('.toggle-text');
+            const isExpanded = toggleProjectsBtn.getAttribute('aria-expanded') === 'true';
+            const toggleText = toggleProjectsBtn.querySelector('.ed-toggle-btn__text');
+            const toggleIcon = toggleProjectsBtn.querySelector('.ed-toggle-btn__icon');
 
-            if (!isCurrentlyExpanded) {
-                // Smoothly reveal additional projects
+            if (!isExpanded) {
                 additionalProjectsWrap.classList.remove('is-collapsed');
                 additionalProjectsWrap.classList.add('is-expanded');
-                toggleProjectsBtn.classList.add('is-expanded');
                 toggleProjectsBtn.setAttribute('aria-expanded', 'true');
                 additionalProjectsWrap.setAttribute('aria-hidden', 'false');
-                if (toggleText) {
-                    toggleText.textContent = 'Show Less';
-                }
+                if (toggleText) toggleText.textContent = 'Show Less';
+                if (toggleIcon) { toggleIcon.classList.remove('fa-plus'); toggleIcon.classList.add('fa-minus'); }
             } else {
-                // Hide additional projects
                 additionalProjectsWrap.classList.remove('is-expanded');
                 additionalProjectsWrap.classList.add('is-collapsed');
-                toggleProjectsBtn.classList.remove('is-expanded');
                 toggleProjectsBtn.setAttribute('aria-expanded', 'false');
                 additionalProjectsWrap.setAttribute('aria-hidden', 'true');
-                if (toggleText) {
-                    toggleText.textContent = 'View More Projects';
-                }
-
-                // Smoothly return visitor to the featured projects view
+                if (toggleText) toggleText.textContent = 'View More Projects';
+                if (toggleIcon) { toggleIcon.classList.remove('fa-minus'); toggleIcon.classList.add('fa-plus'); }
                 const projectsSection = document.getElementById('projects');
                 if (projectsSection) {
-                    const headerOffset = 76;
-                    const elementPosition = projectsSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    const offset = projectsSection.getBoundingClientRect().top + window.pageYOffset - 76;
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
                 }
             }
         });
+    }
+
+    // 4. Header scroll transparency (dark hero → scrolled state)
+    const siteHeader = document.getElementById('header');
+    if (siteHeader) {
+        const heroSection = document.getElementById('hero');
+        const heroHeight = heroSection ? heroSection.offsetHeight * 0.7 : 300;
+
+        const updateHeader = () => {
+            if (window.scrollY > heroHeight) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
+        };
+
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader(); // run once on load
     }
 });
