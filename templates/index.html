@@ -230,49 +230,66 @@
             </div>
         </section>
 
-        <!-- 4. Projects â€” Asymmetric Editorial Grid -->
+                        <!-- 4. Projects — Floating 3D Showcase -->
         <section id="projects" class="ed-section ed-projects">
             <div class="ed-section__inner">
-                <div class="ed-section__header">
+                <div class="ed-section__header ed-reveal">
                     <span class="ed-label">03 / Works</span>
                     <h2 class="ed-section__heading">SELECTED<br>PROJECTS.</h2>
-                    <p class="ed-section__sub">A curated showcase of full-stack applications, e-commerce platforms, and AI systems.</p>
+                    <p class="ed-section__sub">A curated showcase of flagship enterprise platforms, intelligent AI systems, and full-stack web applications.</p>
                 </div>
 
-                <!-- Featured large projects -->
-                <div class="ed-projects__featured">
+                <!-- Primary 2-Column Showcase: Orbit ERP & FashionAI -->
+                <div class="ed-projects__grid">
                     {% for project in data.projects %}
                     {% if project.name == 'FashionAI' or 'Orbit' in project.name %}
-                    <article class="ed-project-card {% if loop.first %}ed-project-card--large{% endif %}">
-                        <div class="ed-project-card__visual">
-                            {% if project.name == 'FashionAI' %}
-                            <img src="./static/img/fashionai_preview.png" alt="FashionAI preview" class="ed-project-card__img" loading="lazy">
-                            {% elif 'Orbit' in project.name %}
-                            <img src="./static/img/orbit_preview.png" alt="Orbit ERP preview" class="ed-project-card__img" loading="lazy">
-                            {% endif %}
-                            <div class="ed-project-card__overlay">
-                                <span class="ed-project-card__num">0{{ loop.index }}</span>
-                            </div>
-                        </div>
-                        <div class="ed-project-card__body">
-                            <span class="ed-label">{{ project.category }}</span>
-                            <h3 class="ed-project-card__title">{{ project.name }}</h3>
-                            <p class="ed-project-card__desc">{{ project.description }}</p>
-                            <div class="ed-project-card__tech">
-                                {% for tech in project.technologies %}
-                                <span class="ed-tag">{{ tech }}</span>
-                                {% endfor %}
-                            </div>
-                            <div class="ed-project-card__links">
-                                {% if project.is_github and project.github_url %}
-                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="ed-link">
-                                    <i class="fa-brands fa-github"></i> GitHub &nearr;
-                                </a>
-                                {% elif project.company %}
-                                <span class="ed-link ed-link--muted">
-                                    <i class="fa-solid fa-shield-halved"></i> {{ project.company }} &bull; Internal
-                                </span>
+                    <article class="ed-project-card ed-reveal" data-tilt-card data-card-index="{{ loop.index0 }}">
+                        <div class="ed-project-card__frame">
+                            <!-- Visual Preview with 3D Depth & Aspect-Ratio Container -->
+                            <div class="ed-project-card__visual">
+                                {% if project.name == 'FashionAI' %}
+                                <img src="./static/img/fashionai_preview.png" alt="FashionAI Intelligent Fashion Recommendation Platform Preview" class="ed-project-card__img" loading="lazy">
+                                {% elif 'Orbit' in project.name %}
+                                <img src="./static/img/orbit_preview.png" alt="Orbit Business Management and ERP Platform Preview" class="ed-project-card__img" loading="lazy">
                                 {% endif %}
+
+                                <div class="ed-project-card__overlay">
+                                    <span class="ed-project-card__num" aria-hidden="true">{% if 'Fashion' in project.name %}01{% else %}02{% endif %}</span>
+                                    <span class="ed-project-card__pill">{{ project.category }}</span>
+                                </div>
+                                <div class="ed-project-card__glare" aria-hidden="true"></div>
+                            </div>
+
+                            <!-- Card Content Details -->
+                            <div class="ed-project-card__body">
+                                <div class="ed-project-card__meta">
+                                    <span class="ed-label ed-project-card__cat">{{ project.category }}</span>
+                                    <span class="ed-project-card__index" aria-hidden="true">FLAGSHIP / {% if 'Fashion' in project.name %}01{% else %}02{% endif %}</span>
+                                </div>
+                                
+                                <h3 class="ed-project-card__title">{{ project.name }}</h3>
+                                <p class="ed-project-card__desc">{{ project.description }}</p>
+                                
+                                <div class="ed-project-card__tech">
+                                    {% for tech in project.technologies %}
+                                    <span class="ed-tag">{{ tech }}</span>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="ed-project-card__links">
+                                    {% if project.is_github and project.github_url %}
+                                    <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View {{ project.name }} source code on GitHub">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>View Repository</span>
+                                        <span class="ed-link__arrow">&nearr;</span>
+                                    </a>
+                                    {% elif project.company %}
+                                    <span class="ed-link ed-link--muted" title="Internal enterprise project built during internship">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        <span>{{ project.company }} &bull; Enterprise</span>
+                                    </span>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -280,40 +297,113 @@
                     {% endfor %}
                 </div>
 
-                <!-- Additional smaller projects -->
-                <div class="ed-projects__toggle-wrap">
+                <!-- Toggle Button to Reveal Other Works -->
+                <div class="ed-projects__toggle-wrap ed-reveal">
                     <button type="button" id="toggle-more-projects" class="ed-toggle-btn" aria-expanded="false" aria-controls="ed-additional-projects">
                         <span class="ed-toggle-btn__text">View More Projects</span>
                         <i class="fa-solid fa-plus ed-toggle-btn__icon" aria-hidden="true"></i>
                     </button>
                 </div>
 
-                <div id="ed-additional-projects" class="ed-projects__grid is-collapsed" aria-hidden="true">
-                    <div class="ed-projects__grid-header">
+                <!-- Expandable Other Works Section -->
+                <div id="ed-additional-projects" class="ed-projects__more is-collapsed" aria-hidden="true">
+                    <div class="ed-projects__more-header">
                         <span class="ed-label">Other Works &amp; Experiments</span>
+                        <span class="ed-projects__more-count">04 Additional Projects</span>
                     </div>
-                    <div class="ed-projects__grid-inner">
-                        {% set proj_num = namespace(n=3) %}
+
+                    <div class="ed-projects__grid ed-projects__grid--more">
+                        {% set more_idx = namespace(n=2) %}
                         {% for project in data.projects %}
                         {% if project.name != 'FashionAI' and 'Orbit' not in project.name %}
-                        {% set proj_num.n = proj_num.n + 1 %}
-                        <article class="ed-project-mini">
-                            <div class="ed-project-mini__top">
-                                <span class="ed-project-mini__num" aria-hidden="true">0{{ proj_num.n }}</span>
-                                <span class="ed-label">{{ project.category }}</span>
-                                {% if project.is_github and project.github_url %}
-                                <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="ed-project-mini__gh" aria-label="View on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.6rem"></i>
-                                </a>
-                                {% endif %}
-                            </div>
-                            <h4 class="ed-project-mini__title">{{ project.name }}</h4>
-                            <p class="ed-project-mini__desc">{{ project.description }}</p>
-                            <div class="ed-project-mini__tech">
-                                {% for tech in project.technologies %}
-                                <span class="ed-tag ed-tag--sm">{{ tech }}</span>
-                                {% endfor %}
+                        {% set more_idx.n = more_idx.n + 1 %}
+                        <article class="ed-project-card" data-tilt-card data-card-index="{{ more_idx.n }}">
+                            <div class="ed-project-card__frame">
+                                <!-- Rich Architecture & Code Preview Canvas -->
+                                <div class="ed-project-card__visual">
+                                    <div class="ed-project-card__canvas type-{{ project.placeholder_type }}">
+                                        <div class="ed-canvas__header">
+                                            <div class="ed-canvas__dots" aria-hidden="true">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="ed-canvas__path">
+                                                {% if 'Wedding' in project.name %}~/apps/wedding_invite/rsvp.py
+                                                {% elif 'Spices' in project.name %}~/trade/spices_auction/bids.php
+                                                {% elif 'Hue' in project.name %}~/storefront/hue_boutique/catalog.jsx
+                                                {% elif 'Workshop' in project.name %}~/cv/workshop/pose_tracker.py
+                                                {% else %}~/src/{{ project.placeholder_type }}_service.py{% endif %}
+                                            </div>
+                                            <span class="ed-canvas__badge">{{ project.technologies[0] }}</span>
+                                        </div>
+                                        <div class="ed-canvas__body">
+                                            {% if 'Wedding' in project.name %}
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">class</span> <span class="tok-fn">WeddingRSVP</span>(models.Model):
+    guest = models.CharField(max_length=<span class="tok-num">120</span>)
+    ceremony_date = models.DateField()
+    status = models.CharField(default=<span class="tok-str">"Confirmed"</span>)
+    guests_count = models.PositiveIntegerField()</code></pre>
+                                            {% elif 'Spices' in project.name %}
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">&lt;?php</span>
+<span class="tok-kw">function</span> <span class="tok-fn">processSpiceLotBid</span>(<span class="tok-var">$lotId</span>, <span class="tok-var">$bidAmount</span>) {
+    <span class="tok-var">$db</span> = MySQLPool::getConnection();
+    <span class="tok-kw">return</span> <span class="tok-var">$db</span>-&gt;execute(<span class="tok-str">"INSERT INTO bids..."</span>);
+}</code></pre>
+                                            {% elif 'Hue' in project.name %}
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">export default function</span> <span class="tok-fn">BoutiqueStorefront</span>() {
+  <span class="tok-kw">const</span> { cart, checkout } = useECommerceCart();
+  <span class="tok-kw">const</span> items = useFetchCatalog(<span class="tok-str">"/api/v1/products"</span>);
+  <span class="tok-kw">return</span> &lt;<span class="tok-tag">StorefrontView</span> catalog={items} /&gt;;
+}</code></pre>
+                                            {% elif 'Workshop' in project.name %}
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">def</span> <span class="tok-fn">track_human_pose</span>(frame):
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    results = mp_pose.Pose().process(rgb)
+    <span class="tok-kw">return</span> extract_landmarks(results)</code></pre>
+                                            {% endif %}
+                                            <div class="ed-canvas__watermark" aria-hidden="true">
+                                                <i class="fa-solid fa-code"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ed-project-card__overlay">
+                                        <span class="ed-project-card__num" aria-hidden="true">0{{ more_idx.n }}</span>
+                                        <span class="ed-project-card__pill">{{ project.category }}</span>
+                                    </div>
+                                    <div class="ed-project-card__glare" aria-hidden="true"></div>
+                                </div>
+
+                                <!-- Card Content Details -->
+                                <div class="ed-project-card__body">
+                                    <div class="ed-project-card__meta">
+                                        <span class="ed-label ed-project-card__cat">{{ project.category }}</span>
+                                        <span class="ed-project-card__index" aria-hidden="true">PROJECT / 0{{ more_idx.n }}</span>
+                                    </div>
+                                    
+                                    <h3 class="ed-project-card__title">{{ project.name }}</h3>
+                                    <p class="ed-project-card__desc">{{ project.description }}</p>
+                                    
+                                    <div class="ed-project-card__tech">
+                                        {% for tech in project.technologies %}
+                                        <span class="ed-tag">{{ tech }}</span>
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="ed-project-card__links">
+                                        {% if project.is_github and project.github_url %}
+                                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View {{ project.name }} source code on GitHub">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>View Repository</span>
+                                            <span class="ed-link__arrow">&nearr;</span>
+                                        </a>
+                                        {% else %}
+                                        <span class="ed-link ed-link--muted">
+                                            <i class="fa-solid fa-code-commit"></i>
+                                            <span>Full-Stack Architecture</span>
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </article>
                         {% endif %}
@@ -323,37 +413,152 @@
             </div>
         </section>
 
-        <!-- 5. Skills â€” Editorial Index -->
+        <!-- 5. Skills — Kinetic Typography Showcase -->
         <section id="skills" class="ed-section ed-skills">
             <div class="ed-section__inner">
-                <div class="ed-section__header">
+                <div class="ed-section__header ed-reveal">
                     <span class="ed-label">04 / Expertise</span>
                     <h2 class="ed-section__heading">TECHNICAL<br>SKILLS.</h2>
+                    <p class="ed-section__sub">A kinetic typography composition of verified technologies, enterprise frameworks, and backend architectures honed through production and academic projects.</p>
                 </div>
 
-                <div class="ed-skills__grid">
-                    {% for group in data.skills %}
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                {% if 'Programming' in group.category or 'Language' in group.category %}<i class="fa-solid fa-code"></i>
-                                {% elif 'Frontend' in group.category %}<i class="fa-solid fa-display"></i>
-                                {% elif 'Backend' in group.category %}<i class="fa-solid fa-server"></i>
-                                {% elif 'Database' in group.category %}<i class="fa-solid fa-database"></i>
-                                {% elif 'Tool' in group.category %}<i class="fa-solid fa-screwdriver-wrench"></i>
-                                {% elif 'AI' in group.category or 'Vision' in group.category %}<i class="fa-solid fa-brain"></i>
-                                {% else %}<i class="fa-solid fa-layer-group"></i>
-                                {% endif %}
+                <!-- Kinetic Typography Composition -->
+                <div class="ed-kinetic-showcase ed-reveal">
+                    <div class="ed-kinetic-stage" id="kinetic-stage" aria-label="Core Technology Showcase">
+                        <!-- Line 1: Primary Languages & Frameworks -->
+                        <div class="ed-kinetic-line ed-kinetic-line--left" data-speed="-1">
+                            <span class="kt-word kt-word--giant kt-word--glow" data-category="Backend & AI" data-tech="Python">
+                                PYTHON
+                                <span class="kt-pill">Core Language</span>
                             </span>
-                            <h3 class="ed-skill-group__name">{{ group.category }}</h3>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif kt-word--accent" data-category="Full-Stack Backend" data-tech="Django">
+                                <em>Django</em>
+                                <span class="kt-pill">Web Framework</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--huge" data-category="Frontend & Backend" data-tech="JavaScript">
+                                JAVASCRIPT
+                                <span class="kt-pill">Web & Node</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--medium" data-category="Enterprise" data-tech="Java">
+                                JAVA
+                                <span class="kt-pill">Language</span>
+                            </span>
                         </div>
-                        <div class="ed-skill-group__tags">
-                            {% for item in group['items'] %}
-                            <span class="ed-skill-badge">{{ item }}</span>
+
+                        <!-- Line 2: Modern Frontend & Node.js -->
+                        <div class="ed-kinetic-line ed-kinetic-line--right" data-speed="1">
+                            <span class="kt-word kt-word--huge kt-word--accent" data-category="Frontend UI" data-tech="React.js">
+                                REACT.JS
+                                <span class="kt-pill">Component UI</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif" data-category="Frontend SPA" data-tech="Angular">
+                                <em>Angular</em>
+                                <span class="kt-pill">MEAN Stack</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--giant" data-category="Backend Runtime" data-tech="Node.js">
+                                NODE.JS
+                                <span class="kt-pill">Server Runtime</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--large kt-word--accent" data-category="Backend Framework" data-tech="Express.js">
+                                EXPRESS.JS
+                                <span class="kt-pill">REST APIs</span>
+                            </span>
+                        </div>
+
+                        <!-- Line 3: Data, Storage & Backend APIs -->
+                        <div class="ed-kinetic-line ed-kinetic-line--left" data-speed="-1">
+                            <span class="kt-word kt-word--giant" data-category="Databases" data-tech="SQL">
+                                SQL
+                                <span class="kt-pill">Query Language</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--large kt-word--accent" data-category="Relational Database" data-tech="MySQL">
+                                MYSQL
+                                <span class="kt-pill">RDBMS</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--serif" data-category="NoSQL Database" data-tech="MongoDB">
+                                <em>MongoDB</em>
+                                <span class="kt-pill">Document DB</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--huge" data-category="Architecture" data-tech="REST APIs">
+                                REST APIs
+                                <span class="kt-pill">Integration</span>
+                            </span>
+                        </div>
+
+                        <!-- Line 4: Computer Vision, Tools & Core Web -->
+                        <div class="ed-kinetic-line ed-kinetic-line--right" data-speed="1">
+                            <span class="kt-word kt-word--huge kt-word--accent" data-category="Computer Vision" data-tech="OpenCV">
+                                OPENCV
+                                <span class="kt-pill">Vision & ML</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif" data-category="Machine Learning" data-tech="K-Means Clustering">
+                                <em>K-Means</em>
+                                <span class="kt-pill">Clustering</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--giant" data-category="Version Control" data-tech="Git">
+                                GIT
+                                <span class="kt-pill">Source Control</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--large" data-category="Tools & Collaboration" data-tech="GitHub">
+                                GITHUB
+                                <span class="kt-pill">Workflows</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--medium kt-word--accent" data-category="Testing" data-tech="Postman">
+                                POSTMAN
+                                <span class="kt-pill">API Testing</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Taxonomy Index: Grouped By Verified Categories -->
+                    <div class="ed-skills-taxonomy">
+                        <div class="ed-taxonomy__header">
+                            <span class="ed-label">Categorical Index</span>
+                            <span class="ed-taxonomy__note">Hover any domain or technology to cross-reference</span>
+                        </div>
+
+                        <div class="ed-taxonomy__grid">
+                            {% for group in data.skills %}
+                            <div class="ed-taxonomy__card" data-category-group="{{ group.category }}">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">0{{ loop.index }}</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            {% if 'Programming' in group.category or 'Language' in group.category %}<i class="fa-solid fa-code"></i>
+                                            {% elif 'Frontend' in group.category %}<i class="fa-solid fa-display"></i>
+                                            {% elif 'Backend' in group.category %}<i class="fa-solid fa-server"></i>
+                                            {% elif 'Database' in group.category %}<i class="fa-solid fa-database"></i>
+                                            {% elif 'Tool' in group.category %}<i class="fa-solid fa-screwdriver-wrench"></i>
+                                            {% elif 'AI' in group.category or 'Vision' in group.category %}<i class="fa-solid fa-brain"></i>
+                                            {% else %}<i class="fa-solid fa-layer-group"></i>
+                                            {% endif %}
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">{{ group.category }}</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    {% for item in group['items'] %}
+                                    <span class="ed-taxonomy__tag" data-tech-tag="{{ item }}">{{ item }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
                             {% endfor %}
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </section>

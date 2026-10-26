@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     <!-- Google Fonts: Plus Jakarta Sans & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -268,61 +268,77 @@
             </div>
         </section>
 
-        <!-- 4. Projects â€” Asymmetric Editorial Grid -->
+                        <!-- 4. Projects — Floating 3D Showcase -->
         <section id="projects" class="ed-section ed-projects">
             <div class="ed-section__inner">
-                <div class="ed-section__header">
+                <div class="ed-section__header ed-reveal">
                     <span class="ed-label">03 / Works</span>
                     <h2 class="ed-section__heading">SELECTED<br>PROJECTS.</h2>
-                    <p class="ed-section__sub">A curated showcase of full-stack applications, e-commerce platforms, and AI systems.</p>
+                    <p class="ed-section__sub">A curated showcase of flagship enterprise platforms, intelligent AI systems, and full-stack web applications.</p>
                 </div>
 
-                <!-- Featured large projects -->
-                <div class="ed-projects__featured">
+                <!-- Primary 2-Column Showcase: Orbit ERP & FashionAI -->
+                <div class="ed-projects__grid">
                     
                     
                     
                     
                     
                     
-                    <article class="ed-project-card ">
-                        <div class="ed-project-card__visual">
-                            
-                            <img src="./static/img/fashionai_preview.png" alt="FashionAI preview" class="ed-project-card__img" loading="lazy">
-                            
-                            <div class="ed-project-card__overlay">
-                                <span class="ed-project-card__num">03</span>
+                    <article class="ed-project-card ed-reveal" data-tilt-card data-card-index="2">
+                        <div class="ed-project-card__frame">
+                            <!-- Visual Preview with 3D Depth & Aspect-Ratio Container -->
+                            <div class="ed-project-card__visual">
+                                
+                                <img src="./static/img/fashionai_preview.png" alt="FashionAI Intelligent Fashion Recommendation Platform Preview" class="ed-project-card__img" loading="lazy">
+                                
+
+                                <div class="ed-project-card__overlay">
+                                    <span class="ed-project-card__num" aria-hidden="true">01</span>
+                                    <span class="ed-project-card__pill">AI & Computer Vision Application</span>
+                                </div>
+                                <div class="ed-project-card__glare" aria-hidden="true"></div>
                             </div>
-                        </div>
-                        <div class="ed-project-card__body">
-                            <span class="ed-label">AI & Computer Vision Application</span>
-                            <h3 class="ed-project-card__title">FashionAI</h3>
-                            <p class="ed-project-card__desc">An intelligent fashion recommendation platform built using Python, Django, MySQL, and OpenCV. Utilizes image processing and K-Means clustering algorithms to detect dominant skin tones from uploaded portraits and recommend complementary color palettes and outfit collections.</p>
-                            <div class="ed-project-card__tech">
+
+                            <!-- Card Content Details -->
+                            <div class="ed-project-card__body">
+                                <div class="ed-project-card__meta">
+                                    <span class="ed-label ed-project-card__cat">AI & Computer Vision Application</span>
+                                    <span class="ed-project-card__index" aria-hidden="true">FLAGSHIP / 01</span>
+                                </div>
                                 
-                                <span class="ed-tag">Python</span>
+                                <h3 class="ed-project-card__title">FashionAI</h3>
+                                <p class="ed-project-card__desc">An intelligent fashion recommendation platform built using Python, Django, MySQL, and OpenCV. Utilizes image processing and K-Means clustering algorithms to detect dominant skin tones from uploaded portraits and recommend complementary color palettes and outfit collections.</p>
                                 
-                                <span class="ed-tag">Django</span>
-                                
-                                <span class="ed-tag">MySQL</span>
-                                
-                                <span class="ed-tag">OpenCV</span>
-                                
-                                <span class="ed-tag">K-Means</span>
-                                
-                                <span class="ed-tag">HTML5</span>
-                                
-                                <span class="ed-tag">CSS3</span>
-                                
-                                <span class="ed-tag">JavaScript</span>
-                                
-                            </div>
-                            <div class="ed-project-card__links">
-                                
-                                <a href="https://github.com/Ament1234/fashionhub" target="_blank" rel="noopener noreferrer" class="ed-link">
-                                    <i class="fa-brands fa-github"></i> GitHub &nearr;
-                                </a>
-                                
+                                <div class="ed-project-card__tech">
+                                    
+                                    <span class="ed-tag">Python</span>
+                                    
+                                    <span class="ed-tag">Django</span>
+                                    
+                                    <span class="ed-tag">MySQL</span>
+                                    
+                                    <span class="ed-tag">OpenCV</span>
+                                    
+                                    <span class="ed-tag">K-Means</span>
+                                    
+                                    <span class="ed-tag">HTML5</span>
+                                    
+                                    <span class="ed-tag">CSS3</span>
+                                    
+                                    <span class="ed-tag">JavaScript</span>
+                                    
+                                </div>
+
+                                <div class="ed-project-card__links">
+                                    
+                                    <a href="https://github.com/Ament1234/fashionhub" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View FashionAI source code on GitHub">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>View Repository</span>
+                                        <span class="ed-link__arrow">&nearr;</span>
+                                    </a>
+                                    
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -331,42 +347,57 @@
                     
                     
                     
-                    <article class="ed-project-card ">
-                        <div class="ed-project-card__visual">
-                            
-                            <img src="./static/img/orbit_preview.png" alt="Orbit ERP preview" class="ed-project-card__img" loading="lazy">
-                            
-                            <div class="ed-project-card__overlay">
-                                <span class="ed-project-card__num">05</span>
+                    <article class="ed-project-card ed-reveal" data-tilt-card data-card-index="4">
+                        <div class="ed-project-card__frame">
+                            <!-- Visual Preview with 3D Depth & Aspect-Ratio Container -->
+                            <div class="ed-project-card__visual">
+                                
+                                <img src="./static/img/orbit_preview.png" alt="Orbit Business Management and ERP Platform Preview" class="ed-project-card__img" loading="lazy">
+                                
+
+                                <div class="ed-project-card__overlay">
+                                    <span class="ed-project-card__num" aria-hidden="true">02</span>
+                                    <span class="ed-project-card__pill">Enterprise Software (Internship)</span>
+                                </div>
+                                <div class="ed-project-card__glare" aria-hidden="true"></div>
                             </div>
-                        </div>
-                        <div class="ed-project-card__body">
-                            <span class="ed-label">Enterprise Software (Internship)</span>
-                            <h3 class="ed-project-card__title">Orbit — Business Management / ERP Platform</h3>
-                            <p class="ed-project-card__desc">Contributed to enterprise business software during my internship at Bairuha Technologies. Worked on business management, CRM, and ERP-style modules, implementing responsive UI views, integrating RESTful APIs, and developing CRUD operations with Angular, Node.js, and MongoDB.</p>
-                            <div class="ed-project-card__tech">
+
+                            <!-- Card Content Details -->
+                            <div class="ed-project-card__body">
+                                <div class="ed-project-card__meta">
+                                    <span class="ed-label ed-project-card__cat">Enterprise Software (Internship)</span>
+                                    <span class="ed-project-card__index" aria-hidden="true">FLAGSHIP / 02</span>
+                                </div>
                                 
-                                <span class="ed-tag">Angular</span>
+                                <h3 class="ed-project-card__title">Orbit — Business Management / ERP Platform</h3>
+                                <p class="ed-project-card__desc">Contributed to enterprise business software during my internship at Bairuha Technologies. Worked on business management, CRM, and ERP-style modules, implementing responsive UI views, integrating RESTful APIs, and developing CRUD operations with Angular, Node.js, and MongoDB.</p>
                                 
-                                <span class="ed-tag">Node.js</span>
-                                
-                                <span class="ed-tag">Express.js</span>
-                                
-                                <span class="ed-tag">MongoDB</span>
-                                
-                                <span class="ed-tag">REST APIs</span>
-                                
-                                <span class="ed-tag">HTML5</span>
-                                
-                                <span class="ed-tag">CSS3</span>
-                                
-                            </div>
-                            <div class="ed-project-card__links">
-                                
-                                <span class="ed-link ed-link--muted">
-                                    <i class="fa-solid fa-shield-halved"></i> Bairuha Technologies &bull; Internal
-                                </span>
-                                
+                                <div class="ed-project-card__tech">
+                                    
+                                    <span class="ed-tag">Angular</span>
+                                    
+                                    <span class="ed-tag">Node.js</span>
+                                    
+                                    <span class="ed-tag">Express.js</span>
+                                    
+                                    <span class="ed-tag">MongoDB</span>
+                                    
+                                    <span class="ed-tag">REST APIs</span>
+                                    
+                                    <span class="ed-tag">HTML5</span>
+                                    
+                                    <span class="ed-tag">CSS3</span>
+                                    
+                                </div>
+
+                                <div class="ed-project-card__links">
+                                    
+                                    <span class="ed-link ed-link--muted" title="Internal enterprise project built during internship">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        <span>Bairuha Technologies &bull; Enterprise</span>
+                                    </span>
+                                    
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -376,142 +407,328 @@
                     
                 </div>
 
-                <!-- Additional smaller projects -->
-                <div class="ed-projects__toggle-wrap">
+                <!-- Toggle Button to Reveal Other Works -->
+                <div class="ed-projects__toggle-wrap ed-reveal">
                     <button type="button" id="toggle-more-projects" class="ed-toggle-btn" aria-expanded="false" aria-controls="ed-additional-projects">
                         <span class="ed-toggle-btn__text">View More Projects</span>
                         <i class="fa-solid fa-plus ed-toggle-btn__icon" aria-hidden="true"></i>
                     </button>
                 </div>
 
-                <div id="ed-additional-projects" class="ed-projects__grid is-collapsed" aria-hidden="true">
-                    <div class="ed-projects__grid-header">
+                <!-- Expandable Other Works Section -->
+                <div id="ed-additional-projects" class="ed-projects__more is-collapsed" aria-hidden="true">
+                    <div class="ed-projects__more-header">
                         <span class="ed-label">Other Works &amp; Experiments</span>
+                        <span class="ed-projects__more-count">04 Additional Projects</span>
                     </div>
-                    <div class="ed-projects__grid-inner">
+
+                    <div class="ed-projects__grid ed-projects__grid--more">
                         
                         
                         
                         
-                        <article class="ed-project-mini">
-                            <div class="ed-project-mini__top">
-                                <span class="ed-project-mini__num" aria-hidden="true">04</span>
-                                <span class="ed-label">Full-Stack Web Application</span>
-                                
-                                <a href="https://github.com/Ament1234/wedding-invitation" target="_blank" rel="noopener noreferrer" class="ed-project-mini__gh" aria-label="View on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.6rem"></i>
-                                </a>
-                                
-                            </div>
-                            <h4 class="ed-project-mini__title">Wedding Invitation Website</h4>
-                            <p class="ed-project-mini__desc">A responsive wedding invitation web application built with Django. Provides an elegant digital platform to display event details, ceremony schedules, venue locations, and guest RSVP management backed by structured SQLite database storage.</p>
-                            <div class="ed-project-mini__tech">
-                                
-                                <span class="ed-tag ed-tag--sm">Python</span>
-                                
-                                <span class="ed-tag ed-tag--sm">Django</span>
-                                
-                                <span class="ed-tag ed-tag--sm">SQLite</span>
-                                
-                                <span class="ed-tag ed-tag--sm">HTML5</span>
-                                
-                                <span class="ed-tag ed-tag--sm">CSS3</span>
-                                
-                                <span class="ed-tag ed-tag--sm">JavaScript</span>
-                                
-                            </div>
-                        </article>
-                        
-                        
-                        
-                        
-                        <article class="ed-project-mini">
-                            <div class="ed-project-mini__top">
-                                <span class="ed-project-mini__num" aria-hidden="true">05</span>
-                                <span class="ed-label">E-Commerce & Bidding Platform</span>
-                                
-                                <a href="https://github.com/Ament1234/spices-auction" target="_blank" rel="noopener noreferrer" class="ed-project-mini__gh" aria-label="View on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.6rem"></i>
-                                </a>
-                                
-                            </div>
-                            <h4 class="ed-project-mini__title">Spices Auction</h4>
-                            <p class="ed-project-mini__desc">A web-based trading and auction management platform for spices. Enables sellers to list spice lots with specifications and registered buyers to submit competitive bids, featuring administrative modules for managing listings, bid statuses, and transactions.</p>
-                            <div class="ed-project-mini__tech">
-                                
-                                <span class="ed-tag ed-tag--sm">PHP</span>
-                                
-                                <span class="ed-tag ed-tag--sm">MySQL</span>
-                                
-                                <span class="ed-tag ed-tag--sm">HTML5</span>
-                                
-                                <span class="ed-tag ed-tag--sm">CSS3</span>
-                                
-                                <span class="ed-tag ed-tag--sm">JavaScript</span>
-                                
-                            </div>
-                        </article>
-                        
-                        
-                        
-                        
-                        
-                        
-                        <article class="ed-project-mini">
-                            <div class="ed-project-mini__top">
-                                <span class="ed-project-mini__num" aria-hidden="true">06</span>
-                                <span class="ed-label">E-Commerce Web Application</span>
-                                
-                            </div>
-                            <h4 class="ed-project-mini__title">Hue Boutique — E-Commerce Website</h4>
-                            <p class="ed-project-mini__desc">A full-stack e-commerce web application featuring a clean, responsive storefront. Includes product catalog browsing, detailed item views, cart management, and backend RESTful API endpoints for product CRUD operations and inventory handling.</p>
-                            <div class="ed-project-mini__tech">
-                                
-                                <span class="ed-tag ed-tag--sm">React.js</span>
-                                
-                                <span class="ed-tag ed-tag--sm">Node.js</span>
-                                
-                                <span class="ed-tag ed-tag--sm">Express.js</span>
-                                
-                                <span class="ed-tag ed-tag--sm">MongoDB</span>
-                                
-                                <span class="ed-tag ed-tag--sm">REST APIs</span>
-                                
-                                <span class="ed-tag ed-tag--sm">CSS3</span>
-                                
+                        <article class="ed-project-card" data-tilt-card data-card-index="3">
+                            <div class="ed-project-card__frame">
+                                <!-- Rich Architecture & Code Preview Canvas -->
+                                <div class="ed-project-card__visual">
+                                    <div class="ed-project-card__canvas type-code">
+                                        <div class="ed-canvas__header">
+                                            <div class="ed-canvas__dots" aria-hidden="true">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="ed-canvas__path">
+                                                ~/apps/wedding_invite/rsvp.py
+                                                
+                                            </div>
+                                            <span class="ed-canvas__badge">Python</span>
+                                        </div>
+                                        <div class="ed-canvas__body">
+                                            
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">class</span> <span class="tok-fn">WeddingRSVP</span>(models.Model):
+    guest = models.CharField(max_length=<span class="tok-num">120</span>)
+    ceremony_date = models.DateField()
+    status = models.CharField(default=<span class="tok-str">"Confirmed"</span>)
+    guests_count = models.PositiveIntegerField()</code></pre>
+                                            
+                                            <div class="ed-canvas__watermark" aria-hidden="true">
+                                                <i class="fa-solid fa-code"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ed-project-card__overlay">
+                                        <span class="ed-project-card__num" aria-hidden="true">03</span>
+                                        <span class="ed-project-card__pill">Full-Stack Web Application</span>
+                                    </div>
+                                    <div class="ed-project-card__glare" aria-hidden="true"></div>
+                                </div>
+
+                                <!-- Card Content Details -->
+                                <div class="ed-project-card__body">
+                                    <div class="ed-project-card__meta">
+                                        <span class="ed-label ed-project-card__cat">Full-Stack Web Application</span>
+                                        <span class="ed-project-card__index" aria-hidden="true">PROJECT / 03</span>
+                                    </div>
+                                    
+                                    <h3 class="ed-project-card__title">Wedding Invitation Website</h3>
+                                    <p class="ed-project-card__desc">A responsive wedding invitation web application built with Django. Provides an elegant digital platform to display event details, ceremony schedules, venue locations, and guest RSVP management backed by structured SQLite database storage.</p>
+                                    
+                                    <div class="ed-project-card__tech">
+                                        
+                                        <span class="ed-tag">Python</span>
+                                        
+                                        <span class="ed-tag">Django</span>
+                                        
+                                        <span class="ed-tag">SQLite</span>
+                                        
+                                        <span class="ed-tag">HTML5</span>
+                                        
+                                        <span class="ed-tag">CSS3</span>
+                                        
+                                        <span class="ed-tag">JavaScript</span>
+                                        
+                                    </div>
+
+                                    <div class="ed-project-card__links">
+                                        
+                                        <a href="https://github.com/Ament1234/wedding-invitation" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View Wedding Invitation Website source code on GitHub">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>View Repository</span>
+                                            <span class="ed-link__arrow">&nearr;</span>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </article>
                         
                         
                         
                         
-                        
-                        
-                        <article class="ed-project-mini">
-                            <div class="ed-project-mini__top">
-                                <span class="ed-project-mini__num" aria-hidden="true">07</span>
-                                <span class="ed-label">Computer Vision & ML Experiments</span>
-                                
-                                <a href="https://github.com/Ament1234/Workshop" target="_blank" rel="noopener noreferrer" class="ed-project-mini__gh" aria-label="View on GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.6rem"></i>
-                                </a>
-                                
+                        <article class="ed-project-card" data-tilt-card data-card-index="4">
+                            <div class="ed-project-card__frame">
+                                <!-- Rich Architecture & Code Preview Canvas -->
+                                <div class="ed-project-card__visual">
+                                    <div class="ed-project-card__canvas type-auction">
+                                        <div class="ed-canvas__header">
+                                            <div class="ed-canvas__dots" aria-hidden="true">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="ed-canvas__path">
+                                                ~/trade/spices_auction/bids.php
+                                                
+                                            </div>
+                                            <span class="ed-canvas__badge">PHP</span>
+                                        </div>
+                                        <div class="ed-canvas__body">
+                                            
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">&lt;?php</span>
+<span class="tok-kw">function</span> <span class="tok-fn">processSpiceLotBid</span>(<span class="tok-var">$lotId</span>, <span class="tok-var">$bidAmount</span>) {
+    <span class="tok-var">$db</span> = MySQLPool::getConnection();
+    <span class="tok-kw">return</span> <span class="tok-var">$db</span>-&gt;execute(<span class="tok-str">"INSERT INTO bids..."</span>);
+}</code></pre>
+                                            
+                                            <div class="ed-canvas__watermark" aria-hidden="true">
+                                                <i class="fa-solid fa-code"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ed-project-card__overlay">
+                                        <span class="ed-project-card__num" aria-hidden="true">04</span>
+                                        <span class="ed-project-card__pill">E-Commerce & Bidding Platform</span>
+                                    </div>
+                                    <div class="ed-project-card__glare" aria-hidden="true"></div>
+                                </div>
+
+                                <!-- Card Content Details -->
+                                <div class="ed-project-card__body">
+                                    <div class="ed-project-card__meta">
+                                        <span class="ed-label ed-project-card__cat">E-Commerce & Bidding Platform</span>
+                                        <span class="ed-project-card__index" aria-hidden="true">PROJECT / 04</span>
+                                    </div>
+                                    
+                                    <h3 class="ed-project-card__title">Spices Auction</h3>
+                                    <p class="ed-project-card__desc">A web-based trading and auction management platform for spices. Enables sellers to list spice lots with specifications and registered buyers to submit competitive bids, featuring administrative modules for managing listings, bid statuses, and transactions.</p>
+                                    
+                                    <div class="ed-project-card__tech">
+                                        
+                                        <span class="ed-tag">PHP</span>
+                                        
+                                        <span class="ed-tag">MySQL</span>
+                                        
+                                        <span class="ed-tag">HTML5</span>
+                                        
+                                        <span class="ed-tag">CSS3</span>
+                                        
+                                        <span class="ed-tag">JavaScript</span>
+                                        
+                                    </div>
+
+                                    <div class="ed-project-card__links">
+                                        
+                                        <a href="https://github.com/Ament1234/spices-auction" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View Spices Auction source code on GitHub">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>View Repository</span>
+                                            <span class="ed-link__arrow">&nearr;</span>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="ed-project-mini__title">Workshop</h4>
-                            <p class="ed-project-mini__desc">A practical suite of computer vision and machine learning applications implemented in Python. Includes real-time human pose estimation, hand gesture tracking, facial emotion detection with text-to-speech feedback, and video background subtraction.</p>
-                            <div class="ed-project-mini__tech">
-                                
-                                <span class="ed-tag ed-tag--sm">Python</span>
-                                
-                                <span class="ed-tag ed-tag--sm">OpenCV</span>
-                                
-                                <span class="ed-tag ed-tag--sm">MediaPipe</span>
-                                
-                                <span class="ed-tag ed-tag--sm">Machine Learning</span>
-                                
+                        </article>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <article class="ed-project-card" data-tilt-card data-card-index="5">
+                            <div class="ed-project-card__frame">
+                                <!-- Rich Architecture & Code Preview Canvas -->
+                                <div class="ed-project-card__visual">
+                                    <div class="ed-project-card__canvas type-store">
+                                        <div class="ed-canvas__header">
+                                            <div class="ed-canvas__dots" aria-hidden="true">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="ed-canvas__path">
+                                                ~/storefront/hue_boutique/catalog.jsx
+                                                
+                                            </div>
+                                            <span class="ed-canvas__badge">React.js</span>
+                                        </div>
+                                        <div class="ed-canvas__body">
+                                            
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">export default function</span> <span class="tok-fn">BoutiqueStorefront</span>() {
+  <span class="tok-kw">const</span> { cart, checkout } = useECommerceCart();
+  <span class="tok-kw">const</span> items = useFetchCatalog(<span class="tok-str">"/api/v1/products"</span>);
+  <span class="tok-kw">return</span> &lt;<span class="tok-tag">StorefrontView</span> catalog={items} /&gt;;
+}</code></pre>
+                                            
+                                            <div class="ed-canvas__watermark" aria-hidden="true">
+                                                <i class="fa-solid fa-code"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ed-project-card__overlay">
+                                        <span class="ed-project-card__num" aria-hidden="true">05</span>
+                                        <span class="ed-project-card__pill">E-Commerce Web Application</span>
+                                    </div>
+                                    <div class="ed-project-card__glare" aria-hidden="true"></div>
+                                </div>
+
+                                <!-- Card Content Details -->
+                                <div class="ed-project-card__body">
+                                    <div class="ed-project-card__meta">
+                                        <span class="ed-label ed-project-card__cat">E-Commerce Web Application</span>
+                                        <span class="ed-project-card__index" aria-hidden="true">PROJECT / 05</span>
+                                    </div>
+                                    
+                                    <h3 class="ed-project-card__title">Hue Boutique — E-Commerce Website</h3>
+                                    <p class="ed-project-card__desc">A full-stack e-commerce web application featuring a clean, responsive storefront. Includes product catalog browsing, detailed item views, cart management, and backend RESTful API endpoints for product CRUD operations and inventory handling.</p>
+                                    
+                                    <div class="ed-project-card__tech">
+                                        
+                                        <span class="ed-tag">React.js</span>
+                                        
+                                        <span class="ed-tag">Node.js</span>
+                                        
+                                        <span class="ed-tag">Express.js</span>
+                                        
+                                        <span class="ed-tag">MongoDB</span>
+                                        
+                                        <span class="ed-tag">REST APIs</span>
+                                        
+                                        <span class="ed-tag">CSS3</span>
+                                        
+                                    </div>
+
+                                    <div class="ed-project-card__links">
+                                        
+                                        <span class="ed-link ed-link--muted">
+                                            <i class="fa-solid fa-code-commit"></i>
+                                            <span>Full-Stack Architecture</span>
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <article class="ed-project-card" data-tilt-card data-card-index="6">
+                            <div class="ed-project-card__frame">
+                                <!-- Rich Architecture & Code Preview Canvas -->
+                                <div class="ed-project-card__visual">
+                                    <div class="ed-project-card__canvas type-vision">
+                                        <div class="ed-canvas__header">
+                                            <div class="ed-canvas__dots" aria-hidden="true">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="ed-canvas__path">
+                                                ~/cv/workshop/pose_tracker.py
+                                                
+                                            </div>
+                                            <span class="ed-canvas__badge">Python</span>
+                                        </div>
+                                        <div class="ed-canvas__body">
+                                            
+                                            <pre class="ed-canvas__code"><code><span class="tok-kw">def</span> <span class="tok-fn">track_human_pose</span>(frame):
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    results = mp_pose.Pose().process(rgb)
+    <span class="tok-kw">return</span> extract_landmarks(results)</code></pre>
+                                            
+                                            <div class="ed-canvas__watermark" aria-hidden="true">
+                                                <i class="fa-solid fa-code"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ed-project-card__overlay">
+                                        <span class="ed-project-card__num" aria-hidden="true">06</span>
+                                        <span class="ed-project-card__pill">Computer Vision & ML Experiments</span>
+                                    </div>
+                                    <div class="ed-project-card__glare" aria-hidden="true"></div>
+                                </div>
+
+                                <!-- Card Content Details -->
+                                <div class="ed-project-card__body">
+                                    <div class="ed-project-card__meta">
+                                        <span class="ed-label ed-project-card__cat">Computer Vision & ML Experiments</span>
+                                        <span class="ed-project-card__index" aria-hidden="true">PROJECT / 06</span>
+                                    </div>
+                                    
+                                    <h3 class="ed-project-card__title">Workshop</h3>
+                                    <p class="ed-project-card__desc">A practical suite of computer vision and machine learning applications implemented in Python. Includes real-time human pose estimation, hand gesture tracking, facial emotion detection with text-to-speech feedback, and video background subtraction.</p>
+                                    
+                                    <div class="ed-project-card__tech">
+                                        
+                                        <span class="ed-tag">Python</span>
+                                        
+                                        <span class="ed-tag">OpenCV</span>
+                                        
+                                        <span class="ed-tag">MediaPipe</span>
+                                        
+                                        <span class="ed-tag">Machine Learning</span>
+                                        
+                                    </div>
+
+                                    <div class="ed-project-card__links">
+                                        
+                                        <a href="https://github.com/Ament1234/Workshop" target="_blank" rel="noopener noreferrer" class="ed-link ed-link--action" aria-label="View Workshop source code on GitHub">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>View Repository</span>
+                                            <span class="ed-link__arrow">&nearr;</span>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </article>
                         
@@ -521,140 +738,275 @@
             </div>
         </section>
 
-        <!-- 5. Skills â€” Editorial Index -->
+        <!-- 5. Skills — Kinetic Typography Showcase -->
         <section id="skills" class="ed-section ed-skills">
             <div class="ed-section__inner">
-                <div class="ed-section__header">
+                <div class="ed-section__header ed-reveal">
                     <span class="ed-label">04 / Expertise</span>
                     <h2 class="ed-section__heading">TECHNICAL<br>SKILLS.</h2>
+                    <p class="ed-section__sub">A kinetic typography composition of verified technologies, enterprise frameworks, and backend architectures honed through production and academic projects.</p>
                 </div>
 
-                <div class="ed-skills__grid">
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-code"></i>
-                                
+                <!-- Kinetic Typography Composition -->
+                <div class="ed-kinetic-showcase ed-reveal">
+                    <div class="ed-kinetic-stage" id="kinetic-stage" aria-label="Core Technology Showcase">
+                        <!-- Line 1: Primary Languages & Frameworks -->
+                        <div class="ed-kinetic-line ed-kinetic-line--left" data-speed="-1">
+                            <span class="kt-word kt-word--giant kt-word--glow" data-category="Backend & AI" data-tech="Python">
+                                PYTHON
+                                <span class="kt-pill">Core Language</span>
                             </span>
-                            <h3 class="ed-skill-group__name">Programming Languages</h3>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif kt-word--accent" data-category="Full-Stack Backend" data-tech="Django">
+                                <em>Django</em>
+                                <span class="kt-pill">Web Framework</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--huge" data-category="Frontend & Backend" data-tech="JavaScript">
+                                JAVASCRIPT
+                                <span class="kt-pill">Web & Node</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--medium" data-category="Enterprise" data-tech="Java">
+                                JAVA
+                                <span class="kt-pill">Language</span>
+                            </span>
                         </div>
-                        <div class="ed-skill-group__tags">
+
+                        <!-- Line 2: Modern Frontend & Node.js -->
+                        <div class="ed-kinetic-line ed-kinetic-line--right" data-speed="1">
+                            <span class="kt-word kt-word--huge kt-word--accent" data-category="Frontend UI" data-tech="React.js">
+                                REACT.JS
+                                <span class="kt-pill">Component UI</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif" data-category="Frontend SPA" data-tech="Angular">
+                                <em>Angular</em>
+                                <span class="kt-pill">MEAN Stack</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--giant" data-category="Backend Runtime" data-tech="Node.js">
+                                NODE.JS
+                                <span class="kt-pill">Server Runtime</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--large kt-word--accent" data-category="Backend Framework" data-tech="Express.js">
+                                EXPRESS.JS
+                                <span class="kt-pill">REST APIs</span>
+                            </span>
+                        </div>
+
+                        <!-- Line 3: Data, Storage & Backend APIs -->
+                        <div class="ed-kinetic-line ed-kinetic-line--left" data-speed="-1">
+                            <span class="kt-word kt-word--giant" data-category="Databases" data-tech="SQL">
+                                SQL
+                                <span class="kt-pill">Query Language</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--large kt-word--accent" data-category="Relational Database" data-tech="MySQL">
+                                MYSQL
+                                <span class="kt-pill">RDBMS</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--serif" data-category="NoSQL Database" data-tech="MongoDB">
+                                <em>MongoDB</em>
+                                <span class="kt-pill">Document DB</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--huge" data-category="Architecture" data-tech="REST APIs">
+                                REST APIs
+                                <span class="kt-pill">Integration</span>
+                            </span>
+                        </div>
+
+                        <!-- Line 4: Computer Vision, Tools & Core Web -->
+                        <div class="ed-kinetic-line ed-kinetic-line--right" data-speed="1">
+                            <span class="kt-word kt-word--huge kt-word--accent" data-category="Computer Vision" data-tech="OpenCV">
+                                OPENCV
+                                <span class="kt-pill">Vision & ML</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--serif" data-category="Machine Learning" data-tech="K-Means Clustering">
+                                <em>K-Means</em>
+                                <span class="kt-pill">Clustering</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&mdash;</span>
+                            <span class="kt-word kt-word--giant" data-category="Version Control" data-tech="Git">
+                                GIT
+                                <span class="kt-pill">Source Control</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--large" data-category="Tools & Collaboration" data-tech="GitHub">
+                                GITHUB
+                                <span class="kt-pill">Workflows</span>
+                            </span>
+                            <span class="kt-sep" aria-hidden="true">&bull;</span>
+                            <span class="kt-word kt-word--medium kt-word--accent" data-category="Testing" data-tech="Postman">
+                                POSTMAN
+                                <span class="kt-pill">API Testing</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Taxonomy Index: Grouped By Verified Categories -->
+                    <div class="ed-skills-taxonomy">
+                        <div class="ed-taxonomy__header">
+                            <span class="ed-label">Categorical Index</span>
+                            <span class="ed-taxonomy__note">Hover any domain or technology to cross-reference</span>
+                        </div>
+
+                        <div class="ed-taxonomy__grid">
                             
-                            <span class="ed-skill-badge">Python</span>
+                            <div class="ed-taxonomy__card" data-category-group="Programming Languages">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">01</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-code"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">Programming Languages</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Python">Python</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Java">Java</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="JavaScript">JavaScript</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="PHP">PHP</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="C">C</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="SQL">SQL</span>
+                                    
+                                </div>
+                            </div>
                             
-                            <span class="ed-skill-badge">Java</span>
+                            <div class="ed-taxonomy__card" data-category-group="Frontend">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">02</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-display"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">Frontend</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="React.js">React.js</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Angular">Angular</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="HTML5">HTML5</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="CSS3">CSS3</span>
+                                    
+                                </div>
+                            </div>
                             
-                            <span class="ed-skill-badge">JavaScript</span>
+                            <div class="ed-taxonomy__card" data-category-group="Backend">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">03</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-server"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">Backend</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Node.js">Node.js</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Express.js">Express.js</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Django">Django</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="REST APIs">REST APIs</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="CRUD Operations">CRUD Operations</span>
+                                    
+                                </div>
+                            </div>
                             
-                            <span class="ed-skill-badge">PHP</span>
+                            <div class="ed-taxonomy__card" data-category-group="Databases">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">04</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-database"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">Databases</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="MySQL">MySQL</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="MongoDB">MongoDB</span>
+                                    
+                                </div>
+                            </div>
                             
-                            <span class="ed-skill-badge">C</span>
+                            <div class="ed-taxonomy__card" data-category-group="Tools">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">05</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">Tools</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Git">Git</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="GitHub">GitHub</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="Postman">Postman</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="VS Code">VS Code</span>
+                                    
+                                </div>
+                            </div>
                             
-                            <span class="ed-skill-badge">SQL</span>
+                            <div class="ed-taxonomy__card" data-category-group="AI & Computer Vision">
+                                <div class="ed-taxonomy__card-top">
+                                    <span class="ed-taxonomy__num" aria-hidden="true">06</span>
+                                    <div class="ed-taxonomy__card-title">
+                                        <span class="ed-taxonomy__icon" aria-hidden="true">
+                                            <i class="fa-solid fa-brain"></i>
+                                            
+                                        </span>
+                                        <h3 class="ed-taxonomy__name">AI & Computer Vision</h3>
+                                    </div>
+                                </div>
+
+                                <div class="ed-taxonomy__tags">
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="OpenCV">OpenCV</span>
+                                    
+                                    <span class="ed-taxonomy__tag" data-tech-tag="K-Means Clustering">K-Means Clustering</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </div>
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-display"></i>
-                                
-                            </span>
-                            <h3 class="ed-skill-group__name">Frontend</h3>
-                        </div>
-                        <div class="ed-skill-group__tags">
-                            
-                            <span class="ed-skill-badge">React.js</span>
-                            
-                            <span class="ed-skill-badge">Angular</span>
-                            
-                            <span class="ed-skill-badge">HTML5</span>
-                            
-                            <span class="ed-skill-badge">CSS3</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-server"></i>
-                                
-                            </span>
-                            <h3 class="ed-skill-group__name">Backend</h3>
-                        </div>
-                        <div class="ed-skill-group__tags">
-                            
-                            <span class="ed-skill-badge">Node.js</span>
-                            
-                            <span class="ed-skill-badge">Express.js</span>
-                            
-                            <span class="ed-skill-badge">Django</span>
-                            
-                            <span class="ed-skill-badge">REST APIs</span>
-                            
-                            <span class="ed-skill-badge">CRUD Operations</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-database"></i>
-                                
-                            </span>
-                            <h3 class="ed-skill-group__name">Databases</h3>
-                        </div>
-                        <div class="ed-skill-group__tags">
-                            
-                            <span class="ed-skill-badge">MySQL</span>
-                            
-                            <span class="ed-skill-badge">MongoDB</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                                
-                            </span>
-                            <h3 class="ed-skill-group__name">Tools</h3>
-                        </div>
-                        <div class="ed-skill-group__tags">
-                            
-                            <span class="ed-skill-badge">Git</span>
-                            
-                            <span class="ed-skill-badge">GitHub</span>
-                            
-                            <span class="ed-skill-badge">Postman</span>
-                            
-                            <span class="ed-skill-badge">VS Code</span>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="ed-skill-group">
-                        <div class="ed-skill-group__header">
-                            <span class="ed-skill-group__icon" aria-hidden="true">
-                                <i class="fa-solid fa-brain"></i>
-                                
-                            </span>
-                            <h3 class="ed-skill-group__name">AI & Computer Vision</h3>
-                        </div>
-                        <div class="ed-skill-group__tags">
-                            
-                            <span class="ed-skill-badge">OpenCV</span>
-                            
-                            <span class="ed-skill-badge">K-Means Clustering</span>
-                            
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </section>
