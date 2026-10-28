@@ -148,52 +148,7 @@
             </nav>
         </section>
 
-        <!-- 3. Experience â€” Editorial Timeline -->
-        <section id="experience" class="ed-section ed-experience">
-            <div class="ed-section__inner">
-                <div class="ed-section__header">
-                    <span class="ed-label">01 / Experience</span>
-                    <h2 class="ed-section__heading">PROFESSIONAL<br>EXPERIENCE.</h2>
-                </div>
-
-                <div class="ed-timeline">
-                    {% for job in data.experience %}
-                    <article class="ed-timeline__entry">
-                        <div class="ed-timeline__num" aria-hidden="true">0{{ loop.index }}</div>
-                        <div class="ed-timeline__content">
-                            <div class="ed-timeline__top">
-                                <div class="ed-timeline__title-block">
-                                    <h3 class="ed-timeline__role">{{ job.role }}</h3>
-                                    <p class="ed-timeline__company">{{ job.company }}</p>
-                                </div>
-                                <div class="ed-timeline__meta">
-                                    <span class="ed-timeline__duration">{{ job.duration }}</span>
-                                    <span class="ed-timeline__badge">{{ job.location }}</span>
-                                </div>
-                            </div>
-
-                            <ul class="ed-timeline__list">
-                                {% for item in job.responsibilities %}
-                                <li class="ed-timeline__item">
-                                    <span class="ed-timeline__bullet" aria-hidden="true">â€”</span>
-                                    <span>{{ item }}</span>
-                                </li>
-                                {% endfor %}
-                            </ul>
-
-                            <div class="ed-timeline__tech">
-                                {% for tech in job.technologies %}
-                                <span class="ed-tag">{{ tech }}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
-
-                <!-- 2. About â€” Cinematic Editorial -->
+        <!-- 2. About — Cinematic Editorial -->
         <section id="about" class="ed-about">
 
             <!-- Ghost background word -->
@@ -203,7 +158,7 @@
 
                 <!-- Left: text column -->
                 <div class="ed-about__text">
-                    <span class="ed-label">02 / The Developer</span>
+                    <span class="ed-label">01 / The Developer</span>
                     <h2 class="ed-about__heading">BEYOND<br>THE CODE.</h2>
                     <div class="ed-rule"></div>
                     <p class="ed-about__lead">{{ data.about.summary }}</p>
@@ -226,6 +181,51 @@
                         class="ed-about__portrait"
                         loading="lazy"
                     >
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Experience — Editorial Timeline -->
+        <section id="experience" class="ed-section ed-experience">
+            <div class="ed-section__inner">
+                <div class="ed-section__header">
+                    <span class="ed-label">02 / Experience</span>
+                    <h2 class="ed-section__heading">PROFESSIONAL<br>EXPERIENCE.</h2>
+                </div>
+
+                <div class="ed-timeline">
+                    {% for job in data.experience %}
+                    <article class="ed-timeline__entry">
+                        <div class="ed-timeline__num" aria-hidden="true">0{{ loop.index }}</div>
+                        <div class="ed-timeline__content">
+                            <div class="ed-timeline__top">
+                                <div class="ed-timeline__title-block">
+                                    <h3 class="ed-timeline__role">{{ job.role }}</h3>
+                                    <p class="ed-timeline__company">{{ job.company }}</p>
+                                </div>
+                                <div class="ed-timeline__meta">
+                                    <span class="ed-timeline__duration">{{ job.duration }}</span>
+                                    <span class="ed-timeline__badge">{{ job.location }}</span>
+                                </div>
+                            </div>
+
+                            <ul class="ed-timeline__list">
+                                {% for item in job.responsibilities %}
+                                <li class="ed-timeline__item">
+                                    <span class="ed-timeline__bullet" aria-hidden="true">—</span>
+                                    <span>{{ item }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+
+                            <div class="ed-timeline__tech">
+                                {% for tech in job.technologies %}
+                                <span class="ed-tag">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
                 </div>
             </div>
         </section>
